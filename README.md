@@ -2,23 +2,15 @@
 
 A light-weight and high-performance component to generate barcode for Svelte.
 
-[![NPM](https://img.shields.io/npm/v/svelte-barcode.svg)](https://www.npmjs.com/package/svelte-barcode) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/svelte-barcode.svg)](https://www.npmjs.com/package/sveltekit-barcode) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## 🔧 Install
 
 svelte-barcode is available on npm. It can be installed with the following command:
 
 ```
-npm install svelte-barcode --save
+npm i sveltekit-barcode
 ```
-
-svelte-barcode is available on yarn as well. It can be installed with the following command:
-
-```
-yarn add svelte-barcode --save
-```
-
-**Note:** Install as a dev dependency ( `npm install svelte-barcode -D` ) ( `yarn add svelte-barcode --dev` ) if using [Sapper](https://sapper.svelte.dev) to avoid a SSR error.
 
 ## 💡 Usage
 
@@ -230,23 +222,6 @@ yarn add svelte-barcode --save
     </tr>
   </tbody>
 </table>
-
-## ❗ Issues
-
-If you think any of the `svelte-barcode` can be improved, please do open a PR with any updates and submit any issues. Also, I will continue to improve this, so you might want to watch/star this repository to revisit.
-
-## 🌟 Contribution
-
-We'd love to have your helping hand on contributions to `svelte-barcode` by forking and sending a pull request!
-
-Your contributions are heartily ♡ welcome, recognized and appreciated. (✿◠‿◠)
-
-How to contribute:
-
-- Open pull request with improvements
-- Discuss ideas in issues
-- Spread the word
-- Reach out with any feedback
 
 ## ⚖️ License
 
