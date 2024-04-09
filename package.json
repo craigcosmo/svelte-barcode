@@ -11,11 +11,6 @@
 	"bugs": {
 		"url": "https://github.com/Bunlong/svelte-barcode.git/issues"
 	},
-	"exports": {
-		".": {
-			"svelte": "./dist/index.js"
-		}
-	},
 	"homepage": "https://github.com/Bunlong/svelte-barcode",
 	"svelte": "src/index.js",
 	"module": "dist/index.mjs",
