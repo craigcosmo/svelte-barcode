@@ -27,6 +27,16 @@
 		"rollup-plugin-svelte": "^6.0.0",
 		"svelte": "^3.0.0"
 	},
+	"exports": {
+		"./Router.svelte": {
+			"types": "./Router.d.ts",
+			"svelte": "./Router.svelte"
+		},
+		".": {
+			"types": "./Router.d.ts",
+			"svelte": "./Router.svelte"
+		}
+	},
 	"keywords": [
 		"svelte",
 		"svelte-barcode",
