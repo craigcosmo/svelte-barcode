@@ -1,11 +1,11 @@
-<script>
-	import { onMount, tick, afterUpdate } from 'svelte'
-	import JsBarcode from 'jsbarcode'
+<script lang="ts">
+	import { onMount, tick, afterUpdate } from 'svelte';
+	import JsBarcode from 'jsbarcode';
 
-	let barcode
-	export let value
-	export let elementTag = 'img'
-	export let options
+	let barcode: any;
+	export let value;
+	export let elementTag = 'img';
+	export let options;
 	const defaultOptions = {
 		format: 'CODE128',
 		width: 2,
@@ -25,24 +25,24 @@
 		marginBottom: undefined,
 		marginLeft: undefined,
 		marginRight: undefined,
-		flat: true,
-	}
+		flat: true
+	};
 
 	onMount(async () => {
-		await tick()
-		JsBarcode(barcode, value, defaultOptions)
-	})
+		await tick();
+		JsBarcode(barcode, value, defaultOptions);
+	});
 
 	afterUpdate(async () => {
-		await tick()
-		JsBarcode(barcode, value, Object.assign(defaultOptions, options))
-	})
+		await tick();
+		JsBarcode(barcode, value, Object.assign(defaultOptions, options));
+	});
 </script>
 
 {#if elementTag === 'img'}
-	<img bind:this="{barcode}" alt="" />
+	<img bind:this={barcode} alt="" />
 {:else if elementTag === 'canvas'}
-	<canvas bind:this="{barcode}"></canvas>
+	<canvas bind:this={barcode}></canvas>
 {:else}
-	<svg bind:this="{barcode}"></svg>
+	<svg bind:this={barcode}></svg>
 {/if}

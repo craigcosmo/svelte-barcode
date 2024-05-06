@@ -1,228 +1,58 @@
-# svelte-barcode
+# create-svelte
 
-A light-weight and high-performance component to generate barcode for Svelte.
+Everything you need to build a Svelte library, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
 
-[![NPM](https://img.shields.io/npm/v/svelte-barcode.svg)](https://www.npmjs.com/package/sveltekit-barcode) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+Read more about creating a library [in the docs](https://kit.svelte.dev/docs/packaging).
 
-## 🔧 Install
+## Creating a project
 
-svelte-barcode is available on npm. It can be installed with the following command:
+If you're seeing this, you've probably already done this step. Congrats!
 
-```
-npm i sveltekit-barcode
-```
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-## 💡 Usage
-
-```js
-<script>
-  import Barcode from 'svelte-barcode';
-</script>
-
-<Barcode
-  value={'svelte-barcode'}
-  elementTag={'canvas'}
-  options={{
-    format: 'CODE128',
-    width: 2,
-    height: 100,
-    text: '',
-    textAlign: 'center',
-    textPosition: 'bottom',
-    textMargin: 2,
-    fontSize: 20,
-    background: '#ffffff',
-    lineColor: '#000000',
-  }}
-/>
+# create a new project in my-app
+npm create svelte@latest my-app
 ```
 
-## props
+## Developing
 
-<table>
-  <thead>
-    <tr>
-      <th>Props</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Require</th>
-      <th>Description</th>
-    </tr>
-  <thead>
-  <tbody>
-    <tr>
-      <td>value</td>
-      <td>string</td>
-      <td></td>
-      <td>✔️</td>
-      <td>Text to generate.</td>
-    </tr>
-    <tr>
-      <td>elementTag</td>
-      <td>'img' | 'canvas' | 'svg'</td>
-      <td>'img'</td>
-      <td>❌</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>options</td>
-      <td>any</td>
-      <td></td>
-      <td>❌</td>
-      <td>Options to generate.</td>
-    </tr>
-  </tbody>
-</table>
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
-## options
+```bash
+npm run dev
 
-<table>
-  <thead>
-    <tr>
-      <th>Options</th>
-      <th>Type</th>
-      <th>Default</th>
-      <th>Require</th>
-      <th>Description</th>
-    </tr>
-  <thead>
-  <tbody>
-    <tr>
-      <td>format</td>
-      <td>string?</td>
-      <td><code>auto</code></td>
-      <td>❌</td>
-      <td>Select which barcode type to use. Please check the <a href="https://github.com/Bunlong/react-barcodes/wiki">wikipage</a> of the different barcode types for more information.</td>
-    </tr>
-    <tr>
-      <td>width</td>
-      <td>number?</td>
-      <td><code>2</code></td>
-      <td>❌</td>
-      <td>The width option is the width of a single bar.</td>
-    </tr>
-    <tr>
-      <td>height</td>
-      <td>number?</td>
-      <td><code>100</code></td>
-      <td>❌</td>
-      <td>The height of the barcode.</td>
-    </tr>
-    <tr>
-      <td>displayValue</td>
-      <td>boolean?</td>
-      <td><code>true</code></td>
-      <td>❌</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>text</td>
-      <td>string?</td>
-      <td><code>undefined</code></td>
-      <td>❌</td>
-      <td>Overide the text that is diplayed</td>
-    </tr>
-    <tr>
-      <td>fontOptions</td>
-      <td>string?</td>
-      <td><code>''</code></td>
-      <td>❌</td>
-      <td>With fontOptions you can add bold or italic text to the barcode.</td>
-    </tr>
-    <tr>
-      <td>font</td>
-      <td>string?</td>
-      <td><code>'monospace'</code></td>
-      <td>❌</td>
-      <td>Define the font used for the text in the generated barcode. This can be any default font or a font defined by a @font-face rule.</td>
-    </tr>
-    <tr>
-      <td>textAlign</td>
-      <td>string?</td>
-      <td><code>'center'</code></td>
-      <td>❌</td>
-      <td>Set the horizontal alignment of the text. Can be <code>left</code> / <code>center</code> / <code>right</code>.</td>
-    </tr>
-    <tr>
-      <td>textPosition</td>
-      <td>string?</td>
-      <td><code>'bottom'</code></td>
-      <td>❌</td>
-      <td>Set the vertical position of the text. Can be <code>bottom</code> / <code>top</code>.</td>
-    </tr>
-    <tr>
-      <td>textMargin</td>
-      <td>number?</td>
-      <td><code>2</code></td>
-      <td>❌</td>
-      <td>Set the vertical position of the text. Can be <code>bottom</code> / <code>top</code>.</td>
-    </tr>
-    <tr>
-      <td>fontSize</td>
-      <td>number?</td>
-      <td><code>20</code></td>
-      <td>❌</td>
-      <td>Set the size of the text.</td>
-    </tr>
-    <tr>
-      <td>background</td>
-      <td>string?</td>
-      <td><code>'#ffffff'</code></td>
-      <td>❌</td>
-      <td>Set the background of the barcode.</td>
-    </tr>
-    <tr>
-      <td>lineColor</td>
-      <td>string?</td>
-      <td><code>'#000000'</code></td>
-      <td>❌</td>
-      <td>Set the color of the bars and the text.</td>
-    </tr>
-    <tr>
-      <td>margin</td>
-      <td>number?</td>
-      <td><code>10</code></td>
-      <td>❌</td>
-      <td>Set the space margin around the barcode. If nothing else is set, all side will inherit the margins property but can be replaced if you want to set them separably.</td>
-    </tr>
-    <tr>
-      <td>marginTop</td>
-      <td>number?</td>
-      <td><code>undefined</code></td>
-      <td>❌</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>marginBottom</td>
-      <td>number?</td>
-      <td><code>undefined</code></td>
-      <td>❌</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>marginLeft</td>
-      <td>number?</td>
-      <td><code>undefined</code></td>
-      <td>❌</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>marginRight</td>
-      <td>number?</td>
-      <td><code>undefined</code></td>
-      <td>❌</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>flat</td>
-      <td>boolean?</td>
-      <td><code>false</code></td>
-      <td>❌</td>
-      <td>Only for <code>EAN8</code> / <code>EAN13</code></td>
-    </tr>
-  </tbody>
-</table>
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
 
-## ⚖️ License
+Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
 
-The MIT License [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+## Building
+
+To build your library:
+
+```bash
+npm run package
+```
+
+To create a production version of your showcase app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+
+## Publishing
+
+Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
+
+To publish your library to [npm](https://www.npmjs.com):
+
+```bash
+npm publish
+```
